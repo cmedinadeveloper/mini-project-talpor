@@ -27,7 +27,7 @@
 		5F547CC656B1896AE5E2EF67 /* libPods-miniProjectTalpor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CCFB9064F0953165538DA8E /* libPods-miniProjectTalpor.a */; };
 		7F07C62DCDB95B1E7999ECF3 /* libPods-miniProjectTalporTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76979D85BF29F20960667248 /* libPods-miniProjectTalporTests.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		88E1865D2219238000E44B2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88E1865C2219238000E44B2E /* GoogleService-Info.plist */; };
+		88E186AE221929C200E44B2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88E186AD221929C200E44B2E /* GoogleService-Info.plist */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
@@ -337,7 +337,7 @@
 		76979D85BF29F20960667248 /* libPods-miniProjectTalporTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-miniProjectTalporTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		88E1865C2219238000E44B2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88E186AD221929C200E44B2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "miniProjectTalpor/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		DB978F316EE1242CF80F1E2E /* Pods-miniProjectTalporTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miniProjectTalporTests.release.xcconfig"; path = "Target Support Files/Pods-miniProjectTalporTests/Pods-miniProjectTalporTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -463,7 +463,7 @@
 		13B07FAE1A68108700A75B9A /* miniProjectTalpor */ = {
 			isa = PBXGroup;
 			children = (
-				88E1865C2219238000E44B2E /* GoogleService-Info.plist */,
+				88E186AD221929C200E44B2E /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -1033,7 +1033,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				88E1865D2219238000E44B2E /* GoogleService-Info.plist in Resources */,
+				88E186AE221929C200E44B2E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
