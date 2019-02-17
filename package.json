@@ -4,6 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "adb:d": "adb devices",
+    "adb:r": "adb kill-server && adb start-server && adb devices",
+    "android:run": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android",
+    "android:shake": "adb shell input keyevent 82",
     "test": "jest"
   },
   "dependencies": {
