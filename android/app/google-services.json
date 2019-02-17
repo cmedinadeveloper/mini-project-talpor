@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "276818321426",
+    "firebase_url": "https://mini-project-talpor.firebaseio.com",
+    "project_id": "mini-project-talpor",
+    "storage_bucket": "mini-project-talpor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276818321426:android:d8a6618c6764d045",
+        "android_client_info": {
+          "package_name": "com.miniprojecttalpor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276818321426-00totikq5ha71kosn37c2istm7d5hkpb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.miniprojecttalpor",
+            "certificate_hash": "5a0137be0d95d2f07d7f7c0e4cefb7ba2788ed5a"
+          }
+        },
+        {
+          "client_id": "276818321426-shjevbqfopp3n71hkhjc6jacq1abl73b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXmrfQ6mn7yMu2s5DFhy_wQQGP7FTiJvU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276818321426-shjevbqfopp3n71hkhjc6jacq1abl73b.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "276818321426-oskkj1nkbftt0r412rmmdc6qktd6p8fq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.project.talpor"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
