@@ -46,3 +46,7 @@ buck-out/
 \.buckd/
 android/app/libs
 android/keystores/debug.keystore
+
+# Pods
+ios/Pods
+ios/Podfile.lock
