@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { Screen, Button } from '@shoutem/ui';
+import { Container, Content, Text, StyleProvider } from 'native-base';
 
-export default class App extends Component {
+export default class SignInScreen extends Component {
   render() {
     return (
-      <Screen styleName="paper">
-        <Button>
-          <Text>CHECK IN HERE</Text>
-        </Button>
-      </Screen>
+      <Container>
+        <Content>
+          <Text>I have changed the text color.</Text>
+        </Content>
+      </Container>
     );
   }
 }

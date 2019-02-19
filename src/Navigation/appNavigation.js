@@ -5,7 +5,6 @@ import {
   createDrawerNavigator,
 } from 'react-navigation';
 import HomeScreen from '../Screens/Home/HomeScreen';
-import SignUpScreen from '../Screens/SignUp/SignUpScreen';
 import SignInScreen from '../Screens/SignIn/SignInScreen';
 
 const AppStack = createDrawerNavigator(
@@ -18,7 +17,7 @@ const AppStack = createDrawerNavigator(
   }
 );
 const AuthStack = createStackNavigator(
-  { SignIn: SignInScreen, SignUp: SignUpScreen },
+  { SignIn: SignInScreen },
   {
     headerMode: 'none',
     initialRouteName: 'SignIn',
@@ -27,12 +26,10 @@ const AuthStack = createStackNavigator(
 
 export default createSwitchNavigator(
   {
-    // SplashScreen: SplashScreen,
     App: AppStack,
     Auth: AuthStack,
   },
   {
-    // Splash screen should be the initial route
     initialRouteName: 'App',
   }
 );
