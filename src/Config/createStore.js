@@ -14,7 +14,6 @@ const persistConfig = {
 };
 
 const navigationMiddleware = createReactNavigationReduxMiddleware(
-  'root',
   state => state.nav
 );
 

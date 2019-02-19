@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Provider, connect } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-import { reduxifyNavigator } from 'react-navigation-redux-helpers';
+import { createReduxContainer } from 'react-navigation-redux-helpers';
 import createStore from './Config/createStore';
 import AppNavigation from './Navigation/appNavigation';
 
 const { store, persistor } = createStore();
 
-const AppNav = reduxifyNavigator(AppNavigation, 'root');
+const AppNav = createReduxContainer(AppNavigation, 'root');
 const mapStateToProps = state => ({
   state: state.nav,
 });
