@@ -8,7 +8,4 @@ target 'miniProjectTalpor' do
   # Pods for miniProjectTalpor
   pod 'Firebase/Core'
 
-
-  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
-
 end
