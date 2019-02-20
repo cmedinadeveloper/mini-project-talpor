@@ -11,9 +11,4 @@ target 'miniProjectTalpor' do
 
   pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
-  target 'miniProjectTalporTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end
