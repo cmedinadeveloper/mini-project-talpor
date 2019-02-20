@@ -1,14 +1,78 @@
 import React, { Component } from 'react';
-import { Container, Content, Text, StyleProvider } from 'native-base';
+import { View } from 'react-native';
+import { connect } from 'react-redux';
+import { Button, Text, Form, Item, Input } from 'native-base';
+import { updateLogin } from '../../Ducks/LoginReducer/LoginReducer';
+import MainContainer from '../../Containers/MainContainer/MainContainer';
+import InputField from '../../Components/InputField/InputField';
+import validate from '../../Utils/ValidationWrapper';
+import styles from './styles';
 
-export default class SignInScreen extends Component {
+class SignInScreen extends Component {
   render() {
+    const {
+      email,
+      emailError,
+      password,
+      passwordError,
+      updateLogin,
+    } = this.props;
+
     return (
-      <Container>
-        <Content>
-          <Text>I have changed the text color.</Text>
-        </Content>
-      </Container>
+      <MainContainer viewTitle="Sign In">
+        <View>
+          <Form>
+            <InputField
+              onChangeText={value => {
+                updateLogin({ email: value });
+              }}
+              onBlur={() => {
+                updateLogin({
+                  errors: {
+                    emailError: validate('email', email),
+                  },
+                });
+              }}
+              error={emailError}
+              style={styles.form_input}
+              type="email"
+              placeholder="Email"
+            />
+            <InputField
+              onChangeText={value => updateLogin({ password: value })}
+              onBlur={() => {
+                updateLogin({
+                  errors: {
+                    passwordError: validate('password', password),
+                  },
+                });
+              }}
+              error={passwordError}
+              style={styles.form_input}
+              type="password"
+              placeholder="Password"
+            />
+            <Button style={styles.form_button} block>
+              <Text>Sign In</Text>
+            </Button>
+          </Form>
+        </View>
+      </MainContainer>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  email: state.Login.email,
+  emailError: state.Login.errors.emailError,
+  password: state.Login.password,
+  passwordError: state.Login.errors.passwordError,
+  loading: state.Login.loading,
+});
+
+const mapDispatchToProps = { updateLogin };
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SignInScreen);

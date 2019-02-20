@@ -3,10 +3,9 @@ import { StyleSheet, Dimensions } from 'react-native';
 const { width, height } = Dimensions.get('window');
 
 export default StyleSheet.create({
-  form_input: {
-    marginTop: 10,
-  },
-  form_button: {
-    marginTop: 20,
+  error_message_box: {
+    alignItems: 'center',
+    paddingLeft: 10,
+    paddingRight: 10,
   },
 });
