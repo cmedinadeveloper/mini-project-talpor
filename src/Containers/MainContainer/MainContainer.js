@@ -1,14 +1,33 @@
 import React, { Component } from 'react';
-import { Container, Content, Text, StyleProvider } from 'native-base';
+import {
+  Container,
+  Content,
+  Header,
+  Body,
+  Left,
+  Title,
+  Right,
+} from 'native-base';
 
-export default class SignInScreen extends Component {
+class MainContainer extends Component {
   render() {
+    const { children, viewTitle } = this.props;
     return (
       <Container>
-        <Content>
-          <Text>I have changed the text color.</Text>
+        <Content padder>
+          <Header>
+            <Left />
+            <Body>
+              <Title>{viewTitle}</Title>
+            </Body>
+            <Right />
+          </Header>
+          {/* Render Child Components */}
+          {children}
         </Content>
       </Container>
     );
   }
 }
+
+export default MainContainer;
