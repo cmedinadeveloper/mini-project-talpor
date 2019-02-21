@@ -14,7 +14,7 @@ class MainContainer extends Component {
     const { children, viewTitle } = this.props;
     return (
       <Container>
-        <Content padder>
+        <Content>
           <Header>
             <Left />
             <Body>

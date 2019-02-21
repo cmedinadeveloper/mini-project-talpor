@@ -33,7 +33,7 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8642946EFAB04DAF84338AAF /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A9436750D8E4F03A104A264 /* MaterialCommunityIcons.ttf */; };
 		88E186AE221929C200E44B2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88E186AD221929C200E44B2E /* GoogleService-Info.plist */; };
-		88E1871C221BC2F800E44B2E /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E1871B221BC2E300E44B2E /* libRNGestureHandler.a */; };
+		88E18752221F0AE200E44B2E /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E1871B221BC2E300E44B2E /* libRNGestureHandler.a */; };
 		9A834718C7244B419062AF5E /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50E3C26F1F1D452196BB21F7 /* Feather.ttf */; };
 		A9C542FD7046464D9508BCF8 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7E6A5AE4844F21984A82B9 /* Roboto.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
@@ -385,7 +385,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88E1871C221BC2F800E44B2E /* libRNGestureHandler.a in Frameworks */,
+				88E18752221F0AE200E44B2E /* libRNGestureHandler.a in Frameworks */,
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
