@@ -23,7 +23,7 @@ const InputField = ({
       {floatingLabel ? <Label>Username</Label> : null}
       {type === 'email' ? <Icon active name="mail" /> : null}
       {type === 'password' ? <Icon active name="key" /> : null}
-      {type === 'text' ? <Icon active name="user" /> : null}
+      {type === 'text' ? <Icon active name="person" /> : null}
       <Input
         onBlur={onBlur}
         onChangeText={onChangeText}
