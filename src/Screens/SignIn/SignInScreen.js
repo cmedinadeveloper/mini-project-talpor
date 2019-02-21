@@ -23,36 +23,38 @@ class SignInScreen extends Component {
       <MainContainer viewTitle="Sign In">
         <View>
           <Form>
-            <InputField
-              onChangeText={value => {
-                updateLogin({ email: value });
-              }}
-              onBlur={() => {
-                updateLogin({
-                  errors: {
-                    emailError: validate('email', email),
-                  },
-                });
-              }}
-              error={emailError}
-              style={styles.form_input}
-              type="email"
-              placeholder="Email"
-            />
-            <InputField
-              onChangeText={value => updateLogin({ password: value })}
-              onBlur={() => {
-                updateLogin({
-                  errors: {
-                    passwordError: validate('password', password),
-                  },
-                });
-              }}
-              error={passwordError}
-              style={styles.form_input}
-              type="password"
-              placeholder="Password"
-            />
+            <View style={styles.form_container}>
+              <InputField
+                onChangeText={value => {
+                  updateLogin({ email: value });
+                }}
+                onBlur={() => {
+                  updateLogin({
+                    errors: {
+                      emailError: validate('email', email),
+                    },
+                  });
+                }}
+                error={emailError}
+                style={styles.form_input}
+                type="email"
+                placeholder="Email"
+              />
+              <InputField
+                onChangeText={value => updateLogin({ password: value })}
+                onBlur={() => {
+                  updateLogin({
+                    errors: {
+                      passwordError: validate('password', password),
+                    },
+                  });
+                }}
+                error={passwordError}
+                style={styles.form_input}
+                type="password"
+                placeholder="Password"
+              />
+            </View>
             <Button style={styles.form_button} block>
               <Text>Sign In</Text>
             </Button>

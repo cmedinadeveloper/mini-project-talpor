@@ -7,6 +7,9 @@ export default StyleSheet.create({
     marginTop: 10,
   },
   form_button: {
-    marginTop: 20,
+    margin: 20,
+  },
+  form_container: {
+    marginRight: 15,
   },
 });
