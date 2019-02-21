@@ -6,6 +6,7 @@ import {
 } from 'react-navigation';
 import HomeScreen from '../Screens/Home/HomeScreen';
 import SignInScreen from '../Screens/SignIn/SignInScreen';
+import SignUpScreen from '../Screens/SignUp/SignUpScreen';
 
 const AppStack = createDrawerNavigator(
   {
@@ -17,7 +18,7 @@ const AppStack = createDrawerNavigator(
   }
 );
 const AuthStack = createStackNavigator(
-  { SignIn: SignInScreen },
+  { SignIn: SignInScreen, SignUp: SignUpScreen },
   {
     headerMode: 'none',
     initialRouteName: 'SignIn',

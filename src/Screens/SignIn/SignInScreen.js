@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, TouchableWithoutFeedback } from 'react-native';
 import { connect } from 'react-redux';
 import { Button, Text, Form, Item, Input } from 'native-base';
 import { updateLogin } from '../../Ducks/LoginReducer/LoginReducer';
@@ -16,6 +16,7 @@ class SignInScreen extends Component {
       password,
       passwordError,
       updateLogin,
+      navigation,
     } = this.props;
 
     return (
@@ -56,6 +57,15 @@ class SignInScreen extends Component {
               <Text>Sign In</Text>
             </Button>
           </Form>
+          <View style={{ margin: 20, alignSelf: 'center' }}>
+            <TouchableWithoutFeedback
+              onPress={() => {
+                navigation.navigate('SignUp');
+              }}
+            >
+              <Text>Create Account</Text>
+            </TouchableWithoutFeedback>
+          </View>
         </View>
       </MainContainer>
     );

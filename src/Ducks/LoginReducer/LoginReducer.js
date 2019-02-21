@@ -21,8 +21,9 @@ const initialState = {
   success: false,
   email: '',
   password: '',
+  displayName: '',
   token: '',
-  errors: { emailError: '', passwordError: '' },
+  errors: { emailError: '', passwordError: '', displayNameError: '' },
   loading: false,
 };
 
