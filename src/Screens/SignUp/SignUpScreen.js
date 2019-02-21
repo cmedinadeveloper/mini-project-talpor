@@ -18,10 +18,11 @@ class SignUpScreen extends Component {
       updateLogin,
       displayName,
       displayNameError,
+      navigation,
     } = this.props;
 
     return (
-      <MainContainer viewTitle="Sign Up">
+      <MainContainer navigation={navigation} backButton viewTitle="Sign Up">
         <View>
           <Form>
             <InputField
