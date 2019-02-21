@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Button, Text, Form, Item, Input, Spinner } from 'native-base';
 import Firebase from 'react-native-firebase';
 import ToastMessage from '../../Components/ToastMessage/ToastMessage';
+import { update as updateAuth } from '../../Ducks/AuthReducer/AuthReducer';
 import { updateLogin } from '../../Ducks/LoginReducer/LoginReducer';
 import MainContainer from '../../Containers/MainContainer/MainContainer';
 import InputField from '../../Components/InputField/InputField';
@@ -11,7 +12,7 @@ import validate from '../../Utils/ValidationWrapper';
 import styles from './styles';
 
 class SignUpScreen extends Component {
-  signIn() {
+  signUp() {
     const {
       email,
       password,
@@ -31,20 +32,22 @@ class SignUpScreen extends Component {
     });
 
     if (!emailError && !passwordError && loading === false) {
-      const values = {
-        email,
-        password,
-      };
       updateLogin({ loading: true });
       Firebase.auth()
         .createUserWithEmailAndPassword(email, password)
-        .then(user => {
-          if (user) {
+        .then(data => {
+          if (data.user) {
             Firebase.auth()
               .currentUser.updateProfile({
                 displayName,
               })
               .then(() => {
+                updateAuth({
+                  displayName,
+                  email: data.user.email,
+                  uuid: data.user.uid,
+                  isLogged: true,
+                });
                 navigation.navigate('App');
                 updateLogin({ loading: false });
               });
@@ -126,7 +129,7 @@ class SignUpScreen extends Component {
             </View>
             <Button
               onPress={() => {
-                this.signIn();
+                this.signUp();
               }}
               style={styles.form_button}
               block
@@ -150,7 +153,7 @@ const mapStateToProps = state => ({
   loading: state.Login.loading,
 });
 
-const mapDispatchToProps = { updateLogin };
+const mapDispatchToProps = { updateLogin, updateAuth };
 
 export default connect(
   mapStateToProps,

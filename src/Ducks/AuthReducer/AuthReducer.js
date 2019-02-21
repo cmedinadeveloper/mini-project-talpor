@@ -22,11 +22,10 @@ export const login = payload => dispatch => {
 export const logout = _ => dispatch => dispatch(clear());
 
 const initialState = {
-  userId: '',
-  token: '',
-  role: '',
-  firstName: '',
-  lastName: '',
+  uuid: '',
+  email: '',
+  displayName: '',
+  isLogged: false,
 };
 
 const AuthReducer = (state = initialState, action) => {
