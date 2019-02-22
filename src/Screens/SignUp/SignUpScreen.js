@@ -5,7 +5,7 @@ import { Button, Text, Form, Item, Input, Spinner } from 'native-base';
 import Firebase from 'react-native-firebase';
 import ToastMessage from '../../Components/ToastMessage/ToastMessage';
 import { update as updateAuth } from '../../Ducks/AuthReducer/AuthReducer';
-import { updateLogin } from '../../Ducks/LoginReducer/LoginReducer';
+import { updateLogin, clearLogin } from '../../Ducks/LoginReducer/LoginReducer';
 import MainContainer from '../../Containers/MainContainer/MainContainer';
 import InputField from '../../Components/InputField/InputField';
 import validate from '../../Utils/ValidationWrapper';
@@ -25,6 +25,7 @@ class SignUpScreen extends Component {
       navigation,
       displayName,
       loading,
+      updateAuth,
       clearLogin,
     } = this.props;
 
@@ -160,7 +161,7 @@ const mapStateToProps = state => ({
   loading: state.Login.loading,
 });
 
-const mapDispatchToProps = { updateLogin, updateAuth };
+const mapDispatchToProps = { updateLogin, updateAuth, clearLogin };
 
 export default connect(
   mapStateToProps,
