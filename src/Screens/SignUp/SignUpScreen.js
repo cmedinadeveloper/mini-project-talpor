@@ -12,6 +12,11 @@ import validate from '../../Utils/ValidationWrapper';
 import styles from './styles';
 
 class SignUpScreen extends Component {
+  componentWillUnmount() {
+    const { clearLogin } = this.props;
+    clearLogin();
+  }
+
   signUp() {
     const {
       email,
@@ -20,6 +25,7 @@ class SignUpScreen extends Component {
       navigation,
       displayName,
       loading,
+      clearLogin,
     } = this.props;
 
     const emailError = validate('email', email);
@@ -50,6 +56,7 @@ class SignUpScreen extends Component {
                 });
                 navigation.navigate('App');
                 updateLogin({ loading: false });
+                clearLogin();
               });
           }
         })

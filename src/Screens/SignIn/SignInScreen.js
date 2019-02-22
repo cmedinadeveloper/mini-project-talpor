@@ -1,17 +1,30 @@
 import React, { Component } from 'react';
-import { View, TouchableWithoutFeedback } from 'react-native';
+import { View, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { connect } from 'react-redux';
 import Firebase from 'react-native-firebase';
 import { Button, Text, Form, Spinner, Input } from 'native-base';
 import { update as updateAuth } from '../../Ducks/AuthReducer/AuthReducer';
 import ToastMessage from '../../Components/ToastMessage/ToastMessage';
-import { updateLogin } from '../../Ducks/LoginReducer/LoginReducer';
+import { updateLogin, clearLogin } from '../../Ducks/LoginReducer/LoginReducer';
 import MainContainer from '../../Containers/MainContainer/MainContainer';
 import InputField from '../../Components/InputField/InputField';
 import validate from '../../Utils/ValidationWrapper';
 import styles from './styles';
 
 class SignInScreen extends Component {
+  componentWillMount() {
+    const { navigation, isLogged } = this.props;
+    if (isLogged) {
+      navigation.navigate('App');
+    }
+    Keyboard.dismiss();
+  }
+
+  componentWillUnmount() {
+    const { clearLogin } = this.props;
+    clearLogin();
+  }
+
   signIn() {
     const {
       email,
@@ -20,6 +33,7 @@ class SignInScreen extends Component {
       navigation,
       loading,
       updateAuth,
+      clearLogin,
     } = this.props;
 
     const emailError = validate('email', email);
@@ -44,6 +58,7 @@ class SignInScreen extends Component {
           });
           navigation.navigate('App');
           updateLogin({ loading: false });
+          clearLogin();
         })
         .catch(error => {
           const { code, message } = error;
@@ -132,9 +147,10 @@ const mapStateToProps = state => ({
   password: state.Login.password,
   passwordError: state.Login.errors.passwordError,
   loading: state.Login.loading,
+  isLogged: state.Auth.isLogged,
 });
 
-const mapDispatchToProps = { updateLogin, updateAuth };
+const mapDispatchToProps = { updateLogin, updateAuth, clearLogin };
 
 export default connect(
   mapStateToProps,
