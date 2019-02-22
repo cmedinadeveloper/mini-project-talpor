@@ -11,6 +11,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "appcenter": "^1.12.2",
+    "appcenter-analytics": "^1.12.2",
+    "appcenter-crashes": "^1.12.2",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "native-base": "^2.11.0",
